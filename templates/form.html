@@ -1,0 +1,56 @@
+<html>
+    <head>
+	<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+        <title>{{ title }} Sentiment Analysis</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <h1>Welcome To SL Bus Service Rating</h1>
+
+        <form method="POST">
+            <textarea name="text1" placeholder="Say Something about the service: ...." rows="10" cols="109"></textarea><br><br>
+
+            <input class="example_a" type="submit">
+        </form>
+        <br>
+        <br>
+        <hr>
+        {% if final %}
+        <div>
+            </h5>'{{ text6 }}'</h5>
+            <h3>{{ text1 }}</h3>
+<!--			<h2>Score table</h2>-->
+
+
+
+<!--<table style="width:100%">-->
+<!--  <tr>-->
+<!--    <th>SENTIMENT METRIC</th>-->
+<!--    <th>SCORE</th> -->
+<!--  </tr>-->
+<!--  <tr>-->
+<!--    <td>Positive</td>-->
+<!--    <td>{{text2}}</td>-->
+<!--    -->
+<!--  </tr>-->
+<!--  <tr>-->
+<!--    <td>Neutral</td>-->
+<!--    <td>{{text3}}</td>-->
+<!--    -->
+<!--  </tr>-->
+<!--  <tr>-->
+<!--    <td>Negative</td>-->
+<!--    <td>{{text5}}</td>-->
+
+<!--</table>-->
+            {% else %}
+            <p></p>
+            {% endif %}
+        </div>
+    </body>
+</html>
+
